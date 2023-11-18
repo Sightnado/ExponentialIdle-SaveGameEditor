@@ -398,7 +398,7 @@
                     </template>
                     <template #content>
                         <div class="col-12" v-for="(data, section) of saveData.data">
-                            <div v-if="typeof data === 'object' && Object.keys(data).length > 0">
+                            <div v-if="typeof data === 'object' && Object.keys(data).length > 0 && Object.keys(data).length < 10000">
                                 <expandable-card>
                                     <template #title>{{ Case.pascalCase2Words(section) }}</template>
                                     <template #content>
